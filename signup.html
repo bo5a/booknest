@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | BookNest Library System</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        .form-box h1 {
+            text-align: center;
+        }
+        .required {
+            color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="images/booknest-logo.svg" alt="BookNest logo" width="600" height="160" usemap="#logoMap">
+        <map name="logoMap">
+            <area shape="rect" coords="20,25,200,140" href="about.html" alt="About BookNest">
+            <area shape="rect" coords="230,30,520,95" href="about.html#idea" alt="Our idea">
+            <area shape="rect" coords="230,95,570,125" href="about.html#team" alt="Our team">
+        </map>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html" class="active">Sign up</a></li>
+            <li><a href="about.html">About us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="box form-box">
+            <h1>Create an Account</h1>
+            <p class="center">Fields with <span class="required">*</span> are required.</p>
+
+            <form action="#" method="post" onsubmit="return validateSignup()">
+                <fieldset style="border: 1px dashed #81b29a; border-radius: 8px;">
+                    <legend>Personal information</legend>
+
+                    <label for="fullName">Full name <span class="required">*</span></label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Your full name">
+
+                    <label for="studentId">Student ID <span class="required">*</span></label>
+                    <input type="text" id="studentId" name="studentId" placeholder="7 digits" maxlength="7">
+
+                    <label for="email">University email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="name@stu.kau.edu.sa">
+
+                    <label for="major">Major</label>
+                    <select id="major" name="major">
+                        <option value="IS">Information Systems</option>
+                        <option value="CS">Computer Science</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <p>Gender:</p>
+                    <p class="check-line">
+                        <input type="radio" id="male" name="gender" value="male" checked>
+                        <label for="male" style="display: inline;">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female" style="display: inline;">Female</label>
+                    </p>
+                </fieldset>
+
+                <fieldset style="border: 1px dashed #81b29a; border-radius: 8px; margin-top: 15px;">
+                    <legend>Account information</legend>
+
+                    <label for="password">Password <span class="required">*</span></label>
+                    <input type="password" id="password" name="password" placeholder="At least 6 characters">
+
+                    <label for="confirmPass">Confirm password <span class="required">*</span></label>
+                    <input type="password" id="confirmPass" name="confirmPass" placeholder="Type it again">
+
+                    <p class="check-line">
+                        <input type="checkbox" id="terms" name="terms">
+                        <label for="terms" style="display: inline;">I agree to the library borrowing rules</label>
+                    </p>
+                </fieldset>
+
+                <p id="signupMsg"></p>
+
+                <div class="center">
+                    <button type="submit" class="btn">Sign up</button>
+                    <button type="reset" class="btn" style="background-color: #888;">Clear</button>
+                </div>
+            </form>
+
+            <p class="center">Already have an account? <a href="login.html">Log in here</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> BookNest - CPIS 358 Project |
+            <a href="about.html">About us</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <!-- Embedded JavaScript: show live message while typing the confirm password -->
+    <script>
+        document.getElementById("confirmPass").onkeyup = function () {
+            var msg = document.getElementById("signupMsg");
+            if (this.value !== document.getElementById("password").value) {
+                msg.className = "error";
+                msg.textContent = "Passwords do not match yet.";
+            } else {
+                msg.className = "success";
+                msg.textContent = "Passwords match.";
+            }
+        };
+    </script>
+</body>
+</html>
