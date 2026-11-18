@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="160" viewBox="0 0 600 160">
+  <rect width="600" height="160" fill="#1f4e79"/>
+  <g stroke="#0b2a45" stroke-width="2">
+    <rect x="30" y="30" width="26" height="100" fill="#e07a5f"/>
+    <rect x="60" y="45" width="26" height="85" fill="#f2cc8f"/>
+    <rect x="90" y="30" width="26" height="100" fill="#81b29a"/>
+    <rect x="120" y="45" width="26" height="85" fill="#f4f1de"/>
+    <rect x="150" y="30" width="26" height="100" fill="#3d85c6"/>
+    <line x1="35" y1="42" x2="51" y2="42"/><line x1="65" y1="57" x2="81" y2="57"/>
+    <line x1="95" y1="42" x2="111" y2="42"/><line x1="125" y1="57" x2="141" y2="57"/>
+    <line x1="155" y1="42" x2="171" y2="42"/>
+  </g>
+  <rect x="20" y="130" width="180" height="8" fill="#8d5524"/>
+  <text x="230" y="85" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="#ffffff">BookNest</text>
+  <text x="233" y="118" font-family="Arial, sans-serif" font-size="18" fill="#f2cc8f">University Library Borrowing System</text>
+</svg>
