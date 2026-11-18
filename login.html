@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | BookNest Library System</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        .form-box h1 {
+            text-align: center;
+        }
+        .links {
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="images/booknest-logo.svg" alt="BookNest logo" width="600" height="160" usemap="#logoMap">
+        <map name="logoMap">
+            <area shape="rect" coords="20,25,200,140" href="about.html" alt="About BookNest">
+            <area shape="rect" coords="230,30,520,95" href="about.html#idea" alt="Our idea">
+            <area shape="rect" coords="230,95,570,125" href="about.html#team" alt="Our team">
+        </map>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html" class="active">Login</a></li>
+            <li><a href="signup.html">Sign up</a></li>
+            <li><a href="about.html">About us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="box form-box">
+            <h1>Student Login</h1>
+            <p class="center">Log in to reserve and track your books.</p>
+
+            <form action="#" method="post" onsubmit="return validateLogin()">
+                <label for="loginId">Student ID</label>
+                <input type="text" id="loginId" name="loginId" placeholder="e.g. 2412345" maxlength="7">
+
+                <label for="loginPass">Password</label>
+                <input type="password" id="loginPass" name="loginPass" placeholder="Your password">
+
+                <p class="check-line">
+                    <input type="checkbox" id="showPass" onclick="togglePassword('loginPass')">
+                    <label for="showPass" style="display: inline;">Show password</label>
+                </p>
+
+                <p class="check-line">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember" style="display: inline;">Remember me</label>
+                </p>
+
+                <p id="loginMsg"></p>
+
+                <div class="center">
+                    <button type="submit" class="btn">Login</button>
+                    <button type="reset" class="btn" style="background-color: #888;">Clear</button>
+                </div>
+            </form>
+
+            <p class="links">Don't have an account? <a href="signup.html">Sign up here</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> BookNest - CPIS 358 Project |
+            <a href="about.html">About us</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <!-- Embedded JavaScript: put the cursor in the first field -->
+    <script>
+        document.getElementById("loginId").focus();
+    </script>
+</body>
+</html>
