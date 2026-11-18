@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | BookNest Library System</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        .avatar {
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            margin: 0 auto 10px;
+            border-radius: 50%;
+            background-color: #1f4e79;
+            color: white;
+            font-size: 28px;
+            text-align: center;
+            border: 3px solid #f2cc8f;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="top">
+        <img src="images/booknest-logo.svg" alt="BookNest logo" width="600" height="160" usemap="#logoMap">
+        <map name="logoMap">
+            <area shape="rect" coords="20,25,200,140" href="about.html" alt="About BookNest">
+            <area shape="rect" coords="230,30,520,95" href="about.html#idea" alt="Our idea">
+            <area shape="rect" coords="230,95,570,125" href="about.html#team" alt="Our team">
+        </map>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign up</a></li>
+            <li><a href="about.html" class="active">About us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1 class="center">About BookNest</h1>
+
+        <p class="center">
+            <a href="#idea">Our idea</a> |
+            <a href="#goals">Our goals</a> |
+            <a href="#team">Our team</a>
+        </p>
+
+        <article>
+            <section id="idea" class="box">
+                <h2>Our Idea</h2>
+                <p>
+                    BookNest is a simple website for the university library. It lets students see which
+                    books are available, reserve a book online, and remember when they need to return it.
+                    We chose this idea because we faced the same problem ourselves before exams.
+                </p>
+            </section>
+
+            <section id="goals" class="box">
+                <h2>Our Goals</h2>
+                <ul>
+                    <li>Make borrowing books faster and easier.</li>
+                    <li>Reduce crowding at the library desk.</li>
+                    <li>Help students avoid late fees.</li>
+                </ul>
+
+                <h3>Library opening hours</h3>
+                <table>
+                    <tr>
+                        <th>Day</th>
+                        <th>Opening time</th>
+                        <th>Closing time</th>
+                    </tr>
+                    <tr>
+                        <td>Sunday - Thursday</td>
+                        <td>8:00 AM</td>
+                        <td>8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td colspan="2" style="text-align: center;">Closed</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>10:00 AM</td>
+                        <td>4:00 PM</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="team">
+                <h2>Our Team - Dinosaurs</h2>
+                <div class="team">
+                    <div class="box center">
+                        <div class="avatar">M</div>
+                        <h3>Mohammed Almoraie</h3>
+                        <p>Built the Home and About us pages and the CSS style sheet.</p>
+                    </div>
+                    <div class="box center">
+                        <div class="avatar">J</div>
+                        <h3>Jawad Bukhari</h3>
+                        <p>Built the Login and Sign up pages and the JavaScript file.</p>
+                    </div>
+                </div>
+                <p><a href="#top">Back to top</a></p>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> BookNest - CPIS 358 Project |
+            <a href="index.html">Home</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
