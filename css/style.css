@@ -1,0 +1,244 @@
+/* ===== BookNest - External Style Sheet ===== */
+
+/* ---------- Basic page setup ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f1de;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ---------- Master page: header ---------- */
+header {
+    background-color: #1f4e79;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+header img {
+    max-width: 100%;
+    border: 3px solid #f2cc8f;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- Master page: menu ---------- */
+nav {
+    background-color: #0b2a45;
+    position: sticky;
+    top: 0;
+    z-index: 100;          /* layering: menu stays above the page content */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 22px;
+    font-weight: bold;
+}
+
+nav li a:hover,
+nav li a.active {
+    background-color: #e07a5f;
+}
+
+/* ---------- Main content ---------- */
+main {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3 {
+    color: #1f4e79;
+}
+
+h1 {
+    text-shadow: 2px 2px 3px #bbb;   /* text shadow effect */
+}
+
+/* ---------- General classes (can be used on any element) ---------- */
+.box {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);   /* box shadow */
+}
+
+.center {
+    text-align: center;
+}
+
+.highlight {
+    color: #e07a5f;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #1f4e79;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background-color: #e07a5f;
+}
+
+/* Element-specific class (only works on <p>) */
+p.note {
+    border-left: 5px solid #81b29a;
+    background-color: #eef6f1;
+    padding: 10px;
+}
+
+/* ---------- Layering technique (z-index) ---------- */
+.layer-container {
+    position: relative;
+    height: 140px;
+    margin-bottom: 20px;
+}
+
+.layer {
+    position: absolute;
+    width: 260px;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.35);
+}
+
+.layer-1 {
+    background-color: #81b29a;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.layer-2 {
+    background-color: #3d85c6;
+    top: 35px;
+    left: 70px;
+    z-index: 2;
+}
+
+.layer-3 {
+    background-color: #e07a5f;
+    top: 70px;
+    left: 140px;
+    z-index: 3;
+}
+
+/* ---------- Tables ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #1f4e79;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* ---------- Forms ---------- */
+.form-box {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.form-box label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.form-box input,
+.form-box select {
+    width: 100%;
+    padding: 9px;
+    margin-top: 4px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+}
+
+.form-box input:focus,
+.form-box select:focus {
+    border-color: #3d85c6;
+    outline: none;
+}
+
+.form-box .check-line input {
+    width: auto;
+}
+
+.error {
+    color: #c0392b;
+    font-size: 14px;
+}
+
+.success {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* ---------- Team cards (About us) ---------- */
+.team {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team .box {
+    flex: 1;
+    min-width: 220px;
+    border-top: 6px solid #e07a5f;
+}
+
+/* ---------- Master page: footer ---------- */
+footer {
+    background-color: #0b2a45;
+    color: #f4f1de;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #f2cc8f;
+}
