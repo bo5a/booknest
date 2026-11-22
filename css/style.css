@@ -17,7 +17,7 @@ body {
 header {
     background-color: #1f4e79;
     text-align: center;
-    padding: 150px;
+    padding: 15px;
     position: relative;
 }
 
@@ -241,4 +241,228 @@ footer {
 
 footer a {
     color: #f2cc8f;
+}
+
+/* =========================================================
+   Assignment 2 - styles used by the JavaScript features
+   ========================================================= */
+
+/* ---------- Dark mode button in the menu ---------- */
+.theme-btn {
+    background-color: transparent;
+    color: #f2cc8f;
+    border: 2px solid #f2cc8f;
+    border-radius: 20px;
+    padding: 6px 14px;
+    margin: 7px 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.theme-btn:hover {
+    background-color: #f2cc8f;
+    color: #0b2a45;
+}
+
+/* ---------- Back to top button (layering with z-index) ---------- */
+.top-btn {
+    display: none;            /* JavaScript shows it after scrolling */
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 200;             /* above the menu and the page */
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background-color: #e07a5f;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- Book of the Day ---------- */
+.book-day {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.book-day img {
+    border-radius: 6px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.35);
+}
+
+.book-info {
+    flex: 1;
+    min-width: 240px;
+}
+
+.dots {
+    margin-top: 12px;
+}
+
+.dot {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+/* ---------- Search bar ---------- */
+.search-bar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-bar input,
+.search-bar select {
+    padding: 9px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.search-bar input {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* ---------- Small buttons and reservation list ---------- */
+.small-btn {
+    background-color: #81b29a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.small-btn:hover {
+    background-color: #1f4e79;
+}
+
+.small-btn:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.reserve-box {
+    border: 2px dashed #81b29a;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 15px;
+}
+
+.reserve-item {
+    margin-bottom: 8px;
+}
+
+.reserve-item .small-btn {
+    background-color: #c0392b;
+    margin-left: 8px;
+}
+
+/* ---------- Password strength bar ---------- */
+.strength {
+    height: 8px;
+    margin-top: 6px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.strength-bar {
+    width: 0;
+    height: 100%;
+    transition: width 0.3s;
+}
+
+.strength-text {
+    margin: 2px 0 0;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.error ul {
+    margin: 5px 0;
+    padding-left: 20px;
+}
+
+/* ---------- FAQ (About us) ---------- */
+.faq-q {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background-color: #1f4e79;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    margin-top: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.faq-a {
+    background-color: #eef6f1;
+    border-left: 5px solid #81b29a;
+    margin: 0;
+    padding: 10px;
+}
+
+/* ---------- Dark mode (class added by JavaScript) ---------- */
+body.dark {
+    background-color: #1b1b1b;
+    color: #eee;
+}
+
+body.dark .box,
+body.dark .reserve-box {
+    background-color: #2b2b2b;
+    border-color: #555;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+    color: #f2cc8f;
+    text-shadow: none;
+}
+
+body.dark a {
+    color: #8ecae6;
+}
+
+body.dark tr:nth-child(even) {
+    background-color: #333;
+}
+
+body.dark p.note,
+body.dark .faq-a {
+    background-color: #24352c;
+}
+
+body.dark input,
+body.dark select {
+    background-color: #3a3a3a;
+    color: #eee;
+}
+
+/* Row of a reserved book (class added by JavaScript) */
+tr.reserved-row td {
+    background-color: #fff3cd;
+    color: #222;
+}
+
+body.dark nav li a,
+body.dark .btn,
+body.dark footer a {
+    color: white;
 }
