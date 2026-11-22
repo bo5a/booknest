@@ -45,6 +45,7 @@
             <li><a href="login.html">Login</a></li>
             <li><a href="signup.html">Sign up</a></li>
             <li><a href="about.html">About us</a></li>
+            <li><button type="button" id="themeBtn" class="theme-btn" onclick="toggleTheme()">Dark mode</button></li>
         </ul>
     </nav>
 
@@ -62,6 +63,7 @@
             <a href="#problem">The problem</a>
             <a href="#benefits">Benefits</a>
             <a href="#how">How it works</a>
+            <a href="#bookday">Book of the day</a>
             <a href="#books">Popular books</a>
         </p>
 
@@ -106,40 +108,90 @@
                 </div>
             </section>
 
+            <!-- Dynamic picture & text (changed by JavaScript) -->
+            <section id="bookday" class="box">
+                <h2>Book of the Day</h2>
+                <div class="book-day">
+                    <img id="bookImg" src="images/book-database.svg" alt="Book cover" width="180" height="260">
+                    <div class="book-info">
+                        <h3 id="bookTitle">Database System Concepts</h3>
+                        <p id="bookAuthor" class="highlight">by Silberschatz</p>
+                        <p id="bookText">Loading book details...</p>
+                        <button type="button" class="btn" onclick="prevBook()">&#9664; Previous</button>
+                        <button type="button" class="btn" onclick="nextBook()">Next &#9654;</button>
+                        <div id="dots" class="dots"></div>
+                    </div>
+                </div>
+            </section>
+
             <section id="books" class="box">
                 <h2>Popular Books This Week</h2>
-                <table>
+
+                <!-- Search the table with JavaScript -->
+                <div class="search-bar">
+                    <input type="text" id="searchBox" placeholder="Search by title or author..." onkeyup="filterBooks()">
+                    <select id="categoryFilter" onchange="filterBooks()">
+                        <option value="all">All categories</option>
+                        <option value="Information Systems">Information Systems</option>
+                        <option value="Web Programming">Web Programming</option>
+                        <option value="Business">Business</option>
+                    </select>
+                </div>
+                <p id="searchResult"></p>
+
+                <table id="booksTable">
                     <tr>
                         <th>Book Title</th>
                         <th>Author</th>
                         <th>Category</th>
                         <th>Status</th>
+                        <th>Action</th>
                     </tr>
                     <tr>
                         <td>Database System Concepts</td>
                         <td>Silberschatz</td>
                         <td>Information Systems</td>
                         <td style="color: green; font-weight: bold;">Available</td>
+                        <td><button type="button" class="small-btn" onclick="reserveBook(this)">Reserve</button></td>
                     </tr>
                     <tr>
                         <td>Systems Analysis and Design</td>
                         <td>Dennis</td>
                         <td>Information Systems</td>
                         <td style="color: #c0392b; font-weight: bold;">Borrowed</td>
+                        <td><button type="button" class="small-btn" disabled>Not available</button></td>
                     </tr>
                     <tr>
                         <td>HTML and CSS</td>
                         <td>Jon Duckett</td>
                         <td>Web Programming</td>
                         <td style="color: green; font-weight: bold;">Available</td>
+                        <td><button type="button" class="small-btn" onclick="reserveBook(this)">Reserve</button></td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript and jQuery</td>
+                        <td>Jon Duckett</td>
+                        <td>Web Programming</td>
+                        <td style="color: green; font-weight: bold;">Available</td>
+                        <td><button type="button" class="small-btn" onclick="reserveBook(this)">Reserve</button></td>
                     </tr>
                     <tr>
                         <td>Principles of Marketing</td>
                         <td>Kotler</td>
                         <td>Business</td>
                         <td style="color: green; font-weight: bold;">Available</td>
+                        <td><button type="button" class="small-btn" onclick="reserveBook(this)">Reserve</button></td>
                     </tr>
                 </table>
+
+                <!-- Reservation list: items are created by JavaScript -->
+                <div class="reserve-box">
+                    <h3>My Reservations (<span id="reserveCount">0</span>/3)</h3>
+                    <p id="emptyText" class="note">You have not reserved any books yet.</p>
+                    <ul id="reserveList"></ul>
+                    <p id="reserveMsg"></p>
+                </div>
+
                 <p><a href="#top">Back to top</a></p>
             </section>
         </article>
@@ -150,6 +202,9 @@
         <p>&copy; <span id="year"></span> BookNest - CPIS 358 Project |
             <a href="about.html">About us</a></p>
     </footer>
+
+    <!-- Back to top button (shown by JavaScript when the user scrolls) -->
+    <button type="button" id="topBtn" class="top-btn" onclick="goToTop()" title="Back to top">&#8679;</button>
 
     <!-- External JavaScript -->
     <script src="js/script.js"></script>

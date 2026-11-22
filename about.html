@@ -39,6 +39,7 @@
             <li><a href="login.html">Login</a></li>
             <li><a href="signup.html">Sign up</a></li>
             <li><a href="about.html" class="active">About us</a></li>
+            <li><button type="button" id="themeBtn" class="theme-btn" onclick="toggleTheme()">Dark mode</button></li>
         </ul>
     </nav>
 
@@ -48,6 +49,7 @@
         <p class="center">
             <a href="#idea">Our idea</a> |
             <a href="#goals">Our goals</a> |
+            <a href="#faq">FAQ</a> |
             <a href="#team">Our team</a>
         </p>
 
@@ -93,18 +95,25 @@
                 </table>
             </section>
 
+            <!-- The questions and answers are created by JavaScript -->
+            <section id="faq" class="box">
+                <h2>Frequently Asked Questions</h2>
+                <p>Click a question to see the answer.</p>
+                <div id="faqList"></div>
+            </section>
+
             <section id="team">
                 <h2>Our Team - Dinosaurs</h2>
                 <div class="team">
                     <div class="box center">
                         <div class="avatar">M</div>
                         <h3>Mohammed Almoraie</h3>
-                        <p>Built the Home and About us pages and the CSS style sheet.</p>
+                        <p>Built the Home and About us pages, the CSS style sheet, the Book of the Day slideshow and the FAQ.</p>
                     </div>
                     <div class="box center">
                         <div class="avatar">J</div>
                         <h3>Jawad Bukhari</h3>
-                        <p>Built the Login and Sign up pages and the JavaScript file.</p>
+                        <p>Built the Login and Sign up pages, the form validation, the book search and the reservation list.</p>
                     </div>
                 </div>
                 <p><a href="#top">Back to top</a></p>
@@ -117,6 +126,10 @@
             <a href="index.html">Home</a></p>
     </footer>
 
+    <!-- Back to top button (shown by JavaScript when the user scrolls) -->
+    <button type="button" id="topBtn" class="top-btn" onclick="goToTop()" title="Back to top">&#8679;</button>
+
+    <!-- External JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>

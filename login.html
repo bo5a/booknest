@@ -34,6 +34,7 @@
             <li><a href="login.html" class="active">Login</a></li>
             <li><a href="signup.html">Sign up</a></li>
             <li><a href="about.html">About us</a></li>
+            <li><button type="button" id="themeBtn" class="theme-btn" onclick="toggleTheme()">Dark mode</button></li>
         </ul>
     </nav>
 
@@ -42,12 +43,13 @@
             <h1>Student Login</h1>
             <p class="center">Log in to reserve and track your books.</p>
 
-            <form action="#" method="post" onsubmit="return validateLogin()">
+            <form action="#" method="post" onsubmit="return validateLogin()" onreset="resetForm(this, 'loginMsg')">
                 <label for="loginId">Student ID</label>
                 <input type="text" id="loginId" name="loginId" placeholder="e.g. 2412345" maxlength="7">
 
                 <label for="loginPass">Password</label>
-                <input type="password" id="loginPass" name="loginPass" placeholder="Your password">
+                <input type="password" id="loginPass" name="loginPass" placeholder="Your password" onkeyup="checkCaps(event)">
+                <p id="capsWarning" class="error" style="display: none;">Caps Lock is on.</p>
 
                 <p class="check-line">
                     <input type="checkbox" id="showPass" onclick="togglePassword('loginPass')">
@@ -76,6 +78,10 @@
             <a href="about.html">About us</a></p>
     </footer>
 
+    <!-- Back to top button (shown by JavaScript when the user scrolls) -->
+    <button type="button" id="topBtn" class="top-btn" onclick="goToTop()" title="Back to top">&#8679;</button>
+
+    <!-- External JavaScript -->
     <script src="js/script.js"></script>
     <!-- Embedded JavaScript: put the cursor in the first field -->
     <script>

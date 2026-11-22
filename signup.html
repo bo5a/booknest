@@ -33,6 +33,7 @@
             <li><a href="login.html">Login</a></li>
             <li><a href="signup.html" class="active">Sign up</a></li>
             <li><a href="about.html">About us</a></li>
+            <li><button type="button" id="themeBtn" class="theme-btn" onclick="toggleTheme()">Dark mode</button></li>
         </ul>
     </nav>
 
@@ -41,7 +42,7 @@
             <h1>Create an Account</h1>
             <p class="center">Fields with <span class="required">*</span> are required.</p>
 
-            <form action="#" method="post" onsubmit="return validateSignup()">
+            <form action="#" method="post" novalidate onsubmit="return validateSignup()" onreset="resetForm(this, 'signupMsg')">
                 <fieldset style="border: 1px dashed #81b29a; border-radius: 8px;">
                     <legend>Personal information</legend>
 
@@ -75,10 +76,17 @@
                     <legend>Account information</legend>
 
                     <label for="password">Password <span class="required">*</span></label>
-                    <input type="password" id="password" name="password" placeholder="At least 6 characters">
+                    <input type="password" id="password" name="password" placeholder="At least 6 characters" onkeyup="checkStrength()">
+                    <div class="strength"><div id="strengthBar" class="strength-bar"></div></div>
+                    <p id="strengthText" class="strength-text"></p>
 
                     <label for="confirmPass">Confirm password <span class="required">*</span></label>
                     <input type="password" id="confirmPass" name="confirmPass" placeholder="Type it again">
+
+                    <p class="check-line">
+                        <input type="checkbox" id="showPass2" onclick="togglePassword('password'); togglePassword('confirmPass');">
+                        <label for="showPass2" style="display: inline;">Show passwords</label>
+                    </p>
 
                     <p class="check-line">
                         <input type="checkbox" id="terms" name="terms">
@@ -103,6 +111,10 @@
             <a href="about.html">About us</a></p>
     </footer>
 
+    <!-- Back to top button (shown by JavaScript when the user scrolls) -->
+    <button type="button" id="topBtn" class="top-btn" onclick="goToTop()" title="Back to top">&#8679;</button>
+
+    <!-- External JavaScript -->
     <script src="js/script.js"></script>
     <!-- Embedded JavaScript: show live message while typing the confirm password -->
     <script>
