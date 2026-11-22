@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="260" viewBox="0 0 180 260">
+  <rect width="180" height="260" rx="6" fill="#8e44ad"/>
+  <rect x="0" y="0" width="14" height="260" fill="#0b2a45" opacity="0.35"/>
+  <text x="95" y="45" font-family="Arial" font-size="17" font-weight="bold" fill="#fff" text-anchor="middle">PRINCIPLES</text>
+  <text x="95" y="70" font-family="Arial" font-size="17" font-weight="bold" fill="#fff" text-anchor="middle">OF</text>
+  <text x="95" y="95" font-family="Arial" font-size="17" font-weight="bold" fill="#fff" text-anchor="middle">MARKETING</text>
+  <rect x="50" y="180" width="20" height="30" fill="#fff"/><rect x="80" y="160" width="20" height="50" fill="#fff"/><rect x="110" y="140" width="20" height="70" fill="#fff"/>
+  <text x="95" y="245" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle" opacity="0.85">BookNest Library</text>
+</svg>
