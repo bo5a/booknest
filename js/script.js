@@ -7,7 +7,7 @@
 
 // Show the current year in the footer of every page
 function showYear() {
-    var yearSpan = document.getElementById("year");
+    var yearSpan = document.getElementById("Year");
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
