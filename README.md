@@ -24,7 +24,7 @@ BookNest is a static website for the university library. It helps KAU students c
   - Login and sign up form validation with red/green fields
   - Password strength bar and Caps Lock warning
   - Dark mode that is remembered between pages
-  - FAQ built with JavaScript and a Back to top button
+  - JavaScript-based FAQ with a back-to-top button
 
 ## How to run
 
